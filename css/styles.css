@@ -3,7 +3,7 @@
   --color-muted: #868686;
   --color-border: #dedede;
   --color-primary: #35b3a9;
-  --color-primary-dark: #03a094;
+  --color-primary-dark: #03b2a5;
   --color-blue: #2963a3;
   --color-blue-light: #eaf3fb;
   --color-footer: #2963a3;
@@ -99,7 +99,7 @@ input {
 .button--header {
   min-width: 230px;
   min-height: 48px;
-  color: #03a094;
+  color: #03b2a5;
   background-color: #e3f5f5;
 }
 
@@ -201,7 +201,7 @@ input {
   height: 2px;
   margin: 5px auto;
   border-radius: 2px;
-  background-color: #03a094;
+  background-color: #03b2a5;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -293,7 +293,7 @@ input {
   border: 1px solid #c1c5cd;
   border-radius: 24px;
   color: var(--color-text);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.3;
   background-color: var(--color-white);
@@ -376,7 +376,7 @@ input {
 }
 
 .article-card--wide .article-card__title {
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.3;
 }
 
@@ -418,16 +418,28 @@ input {
   overflow: hidden;
 }
 
-.article-page::after {
+.article-page {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.article-content__split--decor {
+  position: relative;
+}
+
+.article-content__split--decor::after {
   position: absolute;
-  z-index: -1;
-  right: -170px;
-  top: 1420px;
+  top: 50%;
+  left: calc(50vw + 445px);
   width: 310px;
   height: 310px;
   content: "";
+  transform: translateY(-50%);
   border-radius: 50%;
   background-color: #ff9d8f;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .article-layout {
@@ -731,7 +743,7 @@ input {
 
 .sidebar-card {
   padding: 24px;
-  text-align: center;
+  text-align: left;
 }
 
 .sidebar-card--free {
@@ -749,13 +761,15 @@ input {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.35;
-}
+  text-align: center;
+  }
 
 .sidebar-card__text {
   margin: 0 0 16px;
   font-size: 14px;
-  line-height: 1.42;
-}
+  line-height: 1.35;
+  text-align: center;
+  }
 
 .sidebar-card__button {
   width: 100%;
@@ -837,15 +851,16 @@ input {
 .video-card__title {
   margin: 0 0 12px;
   color: #2963a3;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.35;
 }
 
 .video-card__text {
-  max-width: 160px;
+  max-width: 180px;
   margin: 0 0 16px;
   font-size: 14px;
   line-height: 1.42;
+  text-align: left;
 }
 
 .video-card__price {
@@ -965,9 +980,9 @@ input {
 }
 
 .subscribe__button img {
-  width: 24px;
-  height: 24px;
-}
+  width: 40px;
+  height: 40px;
+  }
 
 .subscribe__text {
   max-width: 486px;
@@ -1102,6 +1117,11 @@ input {
 }
 
 /* Mobile */
+@media (max-width: 767px) {
+  .article-content__toc-list li:nth-child(n + 3) {
+    display: list-item;
+  }
+}
 @media (max-width: 767px) {
   .container {
     width: min(100% - 32px, var(--container));

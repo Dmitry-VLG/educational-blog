@@ -5,12 +5,12 @@
 - `blog.html` — страница блога;
 - `article.html` — страница статьи.
 
-Проект сделан на чистых HTML, CSS и JavaScript без фреймворков. Верстка адаптирована под desktop, tablet и mobile-экраны на основе экспортов из Figma.
+Проект сделан на HTML, CSS без фреймворков. Верстка адаптирована под desktop, tablet и mobile-экраны на основе экспортов из Figma.
 
 ## Структура проекта
 
 ```text
-youtalk-redone/
+educational blog/
 ├── blog.html
 ├── article.html
 ├── README.md
@@ -62,13 +62,6 @@ youtalk-redone/
 - боковая колонка статьи переносится под основной контент;
 - футер перестраивается в мобильную раскладку.
 
-## Технологии
-
-- HTML5;
-- CSS3;
-- CSS Grid;
-- Flexbox;
-- JavaScript для мобильного меню.
 
 ## Примечание
 
